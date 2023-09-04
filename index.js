@@ -13,7 +13,7 @@ function CStrTSeed()
 {
     var inputString = textInputElement.value;
     var BackwardsCounter = 0;
-    var seeder = 0
+    var seeder = 0;
 
     BackwardsCounter = inputString.length - 1;
     for (var i = 0; i < inputString.length; i++)
@@ -35,7 +35,16 @@ function CSeedTStr()
     {
         var seedPad = parseInt(inputNumber) + j;
         seedStringElement.innerHTML += "#" + seedPad + " :";
-        for (var i = inputNumber.length - 1; i >= 0; i--)
+		
+		var returner = seedPad;
+		var powerIncrement = 0;
+		while(returner >= 1)
+		{
+			powerIncrement++;
+			returner = returner/numOfLetters;
+		}
+		
+        for (var i = powerIncrement - 1; i >= 0; i--)
         {
             var letterNum = Math.floor(seedPad / Math.pow(numOfLetters, i) % numOfLetters);
             seedStringElement.innerHTML += String.fromCharCode(letterNum + asciiMinShift);
@@ -45,12 +54,20 @@ function CSeedTStr()
 }
 
 var seed = 0;
-var sentenceLength = 2;
 
-for (var j = 0; j <= 94; j++)
+for (var it = 0; it <= 100; it++)
 {
-    seed = j;
+    seed = it;
     everySentenceElement.innerHTML += "#" + seed + " :";
+	
+	var returner = seed;
+	var sentenceLength = 0;
+	while(returner >= 1)
+	{
+		sentenceLength++;
+		returner = returner/numOfLetters;
+	}
+	
     for (var i = sentenceLength - 1; i >= 0; i--)
     {
         var letterNum = Math.floor(seed / Math.pow(numOfLetters, i) % numOfLetters);
