@@ -7,19 +7,29 @@
     <title>Every English Word Ever</title>
     <style>
         body {margin: 0; padding: 5%;}
-        p {margin: 5%; padding: 0; white-space:pre;}
+        p {margin: 3%; padding: 0;}
+        #everySentence {margin: 2%; padding: 0%;}
+        input{height:200px; font-size:12pt;}
+        div{white-space: pre-wrap; word-wrap:break-word;}
     </style>
 </head>
 <body>
-    <input type="text" id="textInput">
-    <button onclick="CStrTSeed()">Convert string to seed</button>
-    <p id="stringSeed"></p>
+    <div>
+        <textarea type="text" id="textInput" cols="64" rows="4"></textarea>
+        <button onclick="CStrTSeed()">Convert string to seed</button>
+        <p id="stringSeed"></p>
+    </div>
 
-    <input type="number" id="seedInput">
-    <button onclick="CSeedTStr()">Convert seed to string</button>
-    <p id="seedString"></p>
+    <div>
+        <textarea type="number" id="seedInput" cols="64" rows="4"></textarea>
+        <button onclick="CSeedTStr()">Convert seed to string</button>
+        <p id="seedString"></p>
+    </div>
 
-    <p id="everySentence"></p>
+    <div>
+        <p id="everySentence"></p>
+        <button onclick="LoadXSeeds()">Load More...</button>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
