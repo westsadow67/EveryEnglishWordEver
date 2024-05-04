@@ -35,7 +35,7 @@ function CStrTSeed()
         BackwardsCounter--;
     }
     stringSeedElement.textContent += inputString;
-    stringSeedElement.textContent += "'s Seed:" + String.fromCharCode(10);
+    stringSeedElement.textContent += "'s Index:" + String.fromCharCode(10);
     stringSeedElement.textContent += seeder;
     stringSeedElement.textContent += String.fromCharCode(10);
 }
