@@ -14,9 +14,28 @@ const numOfLetters = BigInt(127);*/
 const asciiMinShift = 32;
 const numOfLetters = BigInt(95);
 
+function NewLinePass() 
+{
+	var textIn = textInputElement.value;
+	var textOut = textIn.replace(String.fromCharCode(10), " ");
+	return textOut;
+	
+	/*for (var i = 0; i < textIn.length; i++)
+	{
+		if (textIn.charCodeAt(i) == 10)
+		{
+			textOut
+		}
+		textOut[i] = textIn[i]
+		var inputValue = BigInt(inputString.charCodeAt(i) - asciiMinShift);
+		seeder += inputValue * numOfLetters ** BigInt(BackwardsCounter);
+		BackwardsCounter--;
+	}*/
+}
+
 function CStrTSeed() 
 {
-    var inputString = textInputElement.value;
+    var inputString = NewLinePass();
     var BackwardsCounter = 0;
     var seeder = BigInt(0);
 
