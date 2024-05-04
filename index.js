@@ -27,8 +27,10 @@ function CStrTSeed()
         seeder += inputValue * numOfLetters ** BigInt(BackwardsCounter);
         BackwardsCounter--;
     }
-    stringSeedElement.textContent += inputString + "'s Seed:<br>" + seeder;
-    stringSeedElement.textContent += "<br>";
+    stringSeedElement.textContent += inputString;
+    seedStringElement.innerHTML += "'s Seed:<br>";
+    stringSeedElement.textContent += seeder;
+    seedStringElement.innerHTML += "<br>";
 }
 
 function CSeedTStr() 
