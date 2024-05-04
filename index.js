@@ -28,9 +28,9 @@ function CStrTSeed()
         BackwardsCounter--;
     }
     stringSeedElement.textContent += inputString;
-    stringSeedElement.textContent += "'s Seed:" + String.fromCharCode(13);
+    stringSeedElement.textContent += "'s Seed:" + String.fromCharCode(10);
     stringSeedElement.textContent += seeder;
-    stringSeedElement.textContent += String.fromCharCode(13);
+    stringSeedElement.textContent += String.fromCharCode(10);
 }
 
 function CSeedTStr() 
