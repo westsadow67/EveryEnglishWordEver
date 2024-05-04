@@ -40,7 +40,8 @@ function CSeedTStr()
     for (var j = -1; j < 2; j++)
     {
         var seedPad = inputNumber + BigInt(j);
-        seedStringElement.innerHTML += "#" + seedPad + ":<br>";
+        seedStringElement.textContent += "#" + seedPad + ":";
+	seedStringElement.textContent += String.fromCharCode(10);
 		
 		var returner = seedPad;
 		var powerIncrement = 0;
@@ -53,9 +54,9 @@ function CSeedTStr()
         for (var i = powerIncrement - 1; i >= 0; i--)
         {
             var letterNum = seedPad / numOfLetters ** BigInt(i) % numOfLetters;
-            seedStringElement.innerHTML += String.fromCharCode(Number(letterNum) + asciiMinShift);
+            seedStringElement.textContent += String.fromCharCode(Number(letterNum) + asciiMinShift);
         }
-        seedStringElement.innerHTML += "<br>";
+        seedStringElement.textContent += String.fromCharCode(10);
     }
 }
 
@@ -76,7 +77,7 @@ function LoadXSeeds()
 {
     for (var thisSeed = startingInt; thisSeed < startingInt + XSeeds; thisSeed++)
     {
-        everySentenceElement.innerHTML += "#" + thisSeed + " :";
+        everySentenceElement.textContent += "#" + thisSeed + " :";
         var returner = thisSeed;
         var sentenceLength = 0;
         while(returner >= 1)
@@ -89,14 +90,14 @@ function LoadXSeeds()
         for (var i = sentenceLength - 1; i >= 0; i--)
         {
             var letterNum = thisSeed / numOfLetters ** BigInt(i) % numOfLetters;
-            everySentenceElement.innerHTML += String.fromCharCode(Number(letterNum) + asciiMinShift);
+            everySentenceElement.textContent += String.fromCharCode(Number(letterNum) + asciiMinShift);
         }
-        everySentenceElement.innerHTML += "<br>";
+        everySentenceElement.textContent += String.fromCharCode(10);
 
         Shifter++;
         if (Shifter == numOfLetters)
         {
-            everySentenceElement.innerHTML += "<br>";
+            everySentenceElement.textContent += String.fromCharCode(10);
             Shifter = 0;
         }
     }
