@@ -19,18 +19,6 @@ function NewLinePass()
 	var textIn = textInputElement.value;
 	var textOut = textIn.replace(String.fromCharCode(10), " ");
 	return textOut;
-	
-	/*for (var i = 0; i < textIn.length; i++)
-	{
-		if (textIn.charCodeAt(i) == 10)
-		{
-			textOut
-		}
-		textOut[i] = textIn[i]
-		var inputValue = BigInt(inputString.charCodeAt(i) - asciiMinShift);
-		seeder += inputValue * numOfLetters ** BigInt(BackwardsCounter);
-		BackwardsCounter--;
-	}*/
 }
 
 function CStrTSeed() 
@@ -42,6 +30,7 @@ function CStrTSeed()
     BackwardsCounter = inputString.length - 1;
     for (var i = 0; i < inputString.length; i++)
     {
+	    console.log(inputString.charCodeAt(i));
         var inputValue = BigInt(inputString.charCodeAt(i) - asciiMinShift);
         seeder += inputValue * numOfLetters ** BigInt(BackwardsCounter);
         BackwardsCounter--;
