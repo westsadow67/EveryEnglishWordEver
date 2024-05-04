@@ -28,9 +28,9 @@ function CStrTSeed()
         BackwardsCounter--;
     }
     stringSeedElement.textContent += inputString;
-    stringSeedElement.innerHTML += "'s Seed:<br>";
+    stringSeedElement.innerText += "'s Seed:<br>";
     stringSeedElement.textContent += seeder;
-    stringSeedElement.innerHTML += "<br>";
+    stringSeedElement.innerHTML += '<br>';
 }
 
 function CSeedTStr() 
