@@ -30,7 +30,6 @@ function CStrTSeed()
     BackwardsCounter = inputString.length - 1;
     for (var i = 0; i < inputString.length; i++)
     {
-	    console.log(inputString.charCodeAt(i));
         var inputValue = BigInt(inputString.charCodeAt(i) - asciiMinShift);
         seeder += inputValue * numOfLetters ** BigInt(BackwardsCounter);
         BackwardsCounter--;
