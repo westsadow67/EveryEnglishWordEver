@@ -17,7 +17,7 @@ const numOfLetters = BigInt(95);
 function NewLinePass() 
 {
 	var textIn = textInputElement.value;
-	var textOut = textIn.replace(String.fromCharCode(10), " ");
+	var textOut = textIn.replaceAll(String.fromCharCode(10), " ");
 	return textOut;
 }
 
